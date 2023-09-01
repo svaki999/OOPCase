@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOPCase.Codes
+﻿namespace OOPCase.Codes
 {
     class Patient : Person
     {
@@ -21,7 +15,7 @@ namespace OOPCase.Codes
                 throw new Exception("Kombinationen af Kirurgi og Onkologi er ikke tilladt.");
             }
 
-            // Check læge patient limit
+            // Check om lægen har allerede 3 eller flere patienter
             if (læge.PatientTildelinger >= 3)
             {
                 throw new Exception($"Lægen {læge.Fornavn} {læge.Efternavn} er allerede tildelt til tre eller flere patienter.");
